@@ -11,7 +11,7 @@ public class GreetingController {
 	public String greeting(Model model) {
 		
 		model.addAttribute("name", 1);
-		model.addAttribute("name2", 2);
+		model.addAttribute("name", 1);
 		
 		return "greeting_template";
 	}
