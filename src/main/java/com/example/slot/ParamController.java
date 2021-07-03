@@ -8,10 +8,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class ParamController {
 
+	//Se pasan parametros de forma individual, por cada campo
 	@RequestMapping("/param")
-	public String param(Model model, @RequestParam String name) {
+	public String param(Model model, @RequestParam String nombre, @RequestParam String asunto, @RequestParam String texto) {
 		
-		model.addAttribute("name", name);
+		model.addAttribute("nombre", nombre);
+		model.addAttribute("asunto", asunto);
+		model.addAttribute("texto", texto);
 
 		
 		return "param_template";
